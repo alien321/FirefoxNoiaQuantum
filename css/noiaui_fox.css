@@ -1,0 +1,428 @@
+/* Firefox Quantum userChrome.css tweaks ********************************************************/
+/* Github: https://github.com/aris-t2/noiabuttons ***********************************************/
+/************************************************************************************************/
+
+
+window, page, dialog, wizard, prefwindow {
+    color: #000 !important;
+    font: message-box !important; 
+} 
+
+.close-icon {
+    list-style-image: url("./../images/close.png") !important;
+    -moz-image-region: rect(0, 16px, 16px, 0) !important;
+}
+
+.close-icon:hover {
+    list-style-image: url("./../images/close.png") !important;
+    -moz-image-region: rect(0, 16px, 16px, 0) !important;
+    transform: scale(0.75) !important;
+    transition-duration: 0.1s !important;
+}
+
+
+#TabsToolbar {
+-moz-appearance: none !important;
+background: #dadce4 !important;
+box-shadow: 0px 1px 0px #c0c0c0 inset, 0px 2px 0px #f0f0f0 inset !important;
+margin-bottom: 0px !important;
+z-index: 1 !important;
+border-bottom: 1px solid #c0c0c0 !important;
+position: absolute !important;
+bottom: -1px !important;
+width: 100vw !important;
+-moz-padding-start: 0px !important;
+-moz-margin-start: 0px !important;
+padding-top: unset !important;
+margin-top: unset !important;
+padding-bottom: unset !important;
+}
+
+/* remove 'dragging tab' margin/padding nonsense */
+#TabsToolbar[movingtab] {
+padding-bottom: unset !important;
+}
+
+#TabsToolbar[movingtab] > .tabbrowser-tabs {
+padding-bottom: unset !important;
+margin-bottom: unset !important;
+}
+
+#TabsToolbar[movingtab] + #nav-bar {
+margin-top: unset !important;
+}
+
+
+.tabbrowser-tab::after, .tabbrowser-tab::before {
+    border-left: unset !important;
+    
+}
+
+.tabbrowser-arrowscrollbox > .arrowscrollbox-scrollbox {
+    -moz-padding-end: 15px !important;
+    -moz-padding-start: 25px !important;
+}
+
+
+/* hide non-required items */
+#TabsToolbar .private-browsing-indicator,
+#TabsToolbar #window-controls,
+#TabsToolbar *[type="caption-buttons"],
+#TabsToolbar *[type="pre-tabs"],
+#TabsToolbar *[type="post-tabs"] {
+display: none !important;
+}
+
+#tabbrowser-tabs, #tabbrowser-tabs > .tabbrowser-arrowscrollbox, #tabbrowser-tabs[positionpinnedtabs] > .tabbrowser-tab[pinned] {
+min-height: 30px !important;
+max-height: 30px !important;
+}
+
+.tabbrowser-tab:hover > .tab-stack > .tab-background:not([selected="true"]) {
+    background-color: transparent !important ;
+}
+
+.tab-line:not([selected="true"]):not([multiselected]) {
+    opacity: unset !important;
+    transform: unset !important;
+    transition: unset !important;
+}
+
+.tabbrowser-tab:hover > .tab-stack > .tab-background > .tab-line:not([selected="true"]):not([multiselected]) {
+    background-color: transparent !important;
+    opacity: unset !important;
+    transform: unset !important;
+}
+
+.tab-close-button {
+    margin-inline-end: -9px !important;
+    padding: 5px !important;
+}
+
+.tab-background {
+    border-top-style: none !important;
+}
+
+.tab-background[selected="true"] {
+    border-top-color: transparent !important;
+    background-color: transparent !important;
+    background-repeat: repeat-x;
+    background-image: unset !important;
+}
+
+tab[selected="true"], tab[visuallyselected="true"] {
+    font-weight: bold !important;
+}
+
+/*Controlla*/
+#tabbrowser-tabs {
+min-height: 30px !important;
+max-height: 30px !important;
+width: 100vw !important;
+margin-left:-15px !important;
+--tab-line-color: unset !important;
+}
+
+/*----------------------------------*/
+
+.tabbrowser-tab:hover > .tab-stack > .tab-background:not([selected="true"]) {
+    background-image: url("./../images/tab_leftbackground.png"), url("./../images/tab_midbackground.png"), url("./../images/tab_rightbackground.png") !important;
+    background-position: left bottom, 30px bottom, right bottom !important;
+    background-repeat: no-repeat !important;
+    background-size: 30px 100%, calc(100% - (2 * 30px)) 100%, 30px 100% !important;
+    display: -moz-box !important;
+}
+
+.tab-background[selected="true"] {
+    background-image: url("./../images/tab_leftbackground.png"), url("./../images/tab_midbackground.png"), url("./../images/tab_rightbackground.png") !important;
+    background-position: left bottom, 30px bottom, right bottom !important;
+    background-repeat: no-repeat !important;
+    background-size: 30px 100%, calc(100% - (2 * 30px)) 100%, 30px 100% !important;
+    display: -moz-box !important;
+}
+
+.tab-background {
+    -moz-margin-end: -15px !important;
+    -moz-margin-start: -15px !important; 
+    margin-top: 2px !important;
+    margin-bottom: -2px !important
+}
+
+.tab-content {
+    -moz-padding-end: 9px !important;
+    -moz-padding-start: 9px !important;
+}
+
+.tabbrowser-tab {
+    
+    border-left: unset !important;
+    /*max-width: 210px !important;
+    min-width: 100px !important;*/
+    
+}
+
+:root[sessionrestored] .tab-loading-burst[bursting]::before {
+    display: none !important;
+}
+
+/*----------------------------------*/
+#navigator-toolbox {
+-moz-appearance: none;
+background-color: #dadce4;
+border-top: none;
+}
+
+#navigator-toolbox #toolbar-menubar {
+-moz-box-ordinal-group: 1 !important;
+}
+
+/* navigation toolbar */
+#navigator-toolbox #nav-bar {
+-moz-box-ordinal-group: 2 !important;
+}
+
+/* bookmarks toolbar */
+#navigator-toolbox #PersonalToolbar {
+-moz-box-ordinal-group: 3 !important;
+}
+
+/* 3rd party toolbars */
+#navigator-toolbox toolbar {
+-moz-box-ordinal-group: 10 !important;
+}
+
+#navigator-toolbox #TabsToolbar {
+-moz-box-ordinal-group: 100 !important;
+}
+
+#main-window:not([chromehidden*="toolbar"]) #navigator-toolbox {
+padding-bottom: 30px !important;
+}
+
+#main-window:not([chromehidden*="toolbar"]):not([uidensity="compact"]):not([uidensity="touch"]) #navigator-toolbox {
+padding-bottom: 30px !important;
+}
+
+#main-window:not([chromehidden*="toolbar"])[uidensity="touch"] #navigator-toolbox {
+padding-bottom: 30px !important;
+}
+
+/* disable Mozillas tab jumping nonsense when moving tabs */
+#navigator-toolbox[movingtab] > #titlebar > #TabsToolbar {
+padding-bottom: unset !important;
+}
+
+#navigator-toolbox[movingtab] #tabbrowser-tabs {
+padding-bottom: unset !important;
+margin-bottom: unset !important;
+}
+
+#navigator-toolbox[movingtab] > #nav-bar {
+margin-top: unset !important;
+}
+
+#nav-bar {
+/*background-image: linear-gradient(rgba(253,253,253,0.45), rgba(255,255,255,0)) !important;*/
+box-shadow: 0 1px 0 rgba(253,253,253,0.45) inset !important;
+margin-top: -1px !important;
+padding-top: 2px !important;
+padding-bottom: 2px !important;
+position: relative !important;
+z-index: 1 !important;
+min-height: 40px !important;
+max-height: 40px !important;
+-moz-appearance: none !important;
+background-color: #dadce4 !important;
+}
+
+#PersonalToolbar {
+background-color: #dadce4 !important;
+}
+
+#urlbar, .searchbar-textbox {
+border-radius: 20px !important;
+background-color: #f2f2f2 !important;
+border: 1px solid #b0b0b0 !important;
+-moz-padding-start: 0px !important;
+-moz-padding-end: 0px !important;
+margin: 5px 5px !important;
+min-height: 24px !important;
+max-height: 24px !important;
+}
+
+#nav-bar #urlbar-container {
+min-height: 40px !important;
+max-height: 40px !important;
+}
+
+
+#pocket-button, #pageAction-panel-pocket {
+display: none;
+}
+
+#urlbar-wrapper {
+-moz-box-align: center !important;
+}
+
+#urlbar:-moz-locale-dir(ltr) box {
+border-top-left-radius: 3px !important;
+border-bottom-left-radius: 3px !important;
+}
+
+#urlbar:-moz-locale-dir(rtl) box {
+border-top-right-radius: 3px !important;
+border-bottom-right-radius: 3px !important;
+} 
+
+.findbar-button, toolbarbutton.bookmark-item:not(.subviewbutton), toolbar .toolbarbutton-1 > .toolbarbutton-icon, toolbar .toolbarbutton-1 > .toolbarbutton-text, toolbar .toolbarbutton-1 > .toolbarbutton-badge-stack {
+    padding: unset !important;
+}
+
+
+
+
+#sidebar-header {
+padding: 1px !important;
+background: url("./../images/toolbar-background.png") center left repeat-x #fdfdfe !important;
+border-bottom: unset !important;
+    
+}
+
+
+#search-box {
+-moz-appearance: none !important;
+margin: 2px !important;
+border-radius: 9.5pt !important;
+border: 1px solid #909090 !important;
+padding: 2px 4px !important;
+-moz-padding-start: 9px !important;
+min-height: 20px !important;
+}
+
+
+.sidebar-splitter {
+    border: 0 !important;
+    -moz-border-end: 1px solid #a0a0a0 !important;
+    min-width: 0 !important;
+    width: 3px !important;
+    background-color: transparent !important;
+    -moz-margin-start: -3px !important;
+    position: relative !important;
+}
+
+#sidebar-search-container {
+padding: 0px !important;
+background: url("./../images/tool-background2.png") center left repeat-x #adaebb !important;
+border-bottom: 1px solid #808080 !important;
+min-height: 25px !important;
+}
+
+
+
+
+
+menupopup, panel {
+    background: url("./../images/menuback.png") repeat-y #dadce4 !important;
+    color: #000 !important;
+    min-width: 1px !important;
+    border: 1px solid #666 !important;
+    -moz-appearance: none !important;
+    border: none;
+}
+
+menu[_moz-menuactive="true"] {
+    color: #000 !important;
+    text-shadow: none !important;
+    border: 1px solid #307DBC !important;
+    background-image: url("./../images/tree-hover.png") !important;
+}
+
+menuitem[_moz-menuactive="true"] {
+    color: #000 !important;
+    text-shadow: none !important;
+    border: 1px solid #307DBC !important;
+    background-image: url("./../images/tree-hover.png") !important;
+}
+
+menu, menuitem, menucaption, .splitmenu-menuitem {
+    -moz-box-align: center !important;
+    -moz-image-region: auto !important;
+    color: #000 !important;
+    font: menu !important;
+    list-style-image: none !important;
+    border: 1px solid transparent !important;
+    
+    
+}
+
+menubar > menu {
+    -moz-appearance: none !important;
+    color: #000 !important;
+    margin: 1px 0 !important;
+    padding: 1px 4px !important;
+    border: 1px solid transparent !important;
+    border-radius: 3px !important;
+    
+}
+
+menupopup > menu, menupopup > menuitem, menupopup > menucaption {
+    max-width: 42em !important;
+    border: 1px solid transparent !important;
+    padding-top: 1px !important;
+    padding-bottom: 1px !important;
+    margin-top: 1px !important;
+    margin-bottom: 1px !important;
+    padding-left: 4px !important;
+}
+
+menu, menuitem, menucaption {
+    -moz-appearance: none !important;
+}
+
+
+menuitem[type="checkbox"][checked="true"] {
+    list-style-image: url("./../images/menu-check.png") !important;
+}
+
+menuitem[type="checkbox"] {
+    list-style-image: url("./../images/menu-check-off.png") !important;
+} 
+
+#context-back, #historyMenuBack, #quicknote-fopensidebar, menuitem[oncommand="BrowserBack(event, true)"] {
+list-style-image: url("./../images/back.png") !important;
+}
+
+#context-forward, #historyMenuForward, menuitem[oncommand="BrowserForward(event, true)"] {
+list-style-image: url("./../images/forward.png") !important;
+}
+
+#context-bookmarklink, #context-bookmarkpage, #fileNewBookmark, #menu_bookmarksSidebar, #context_bookmarkTab, #miAddBookmark, #placesContext_createBookmark, #placesContext_new\:bookmark, #appmenu_bookmarksSidebar, #appmenu_bookmarkThisPage, #BMB_bookmarkThisPage, menuitem[command="Browser:AddBookmarkAs"], menuitem[command="cmd_bm_newbookmark"], menuitem[oncommand^="RemoteTabViewer.bookmark"], menuitem[oncommand="addBookmarkAs(document.getElementById(\'content\'), false);"], menuitem[oncommand="gContextMenu.addBookmarkForFrame();"], menuitem[oncommand="abhere.addBookmark(event)"], menuitem[oncommand="BookmarkThisTab();"], menuitem[oncommand="historyAddBookmarks();"] {
+list-style-image: url("./../images/bookmark_item.png") !important;
+}
+
+
+#context-reload, #tm-reloadLeft, #tm-reloadRight, #tm-reloadOther, #menu-reload, #tm-autoreload_menu, #editReload, #editReloadMicrosummary, #placesContext_reload, #toggleSelected, #placesContext_reloadMicrosummary, #context_reloadTab, #\:rejoin, #resethitcounts, .treecol-image menuitem:last-child, #context\:messages\:rejoin, #context\:tab\:rejoin, #menuitem_retry#tm-reloadTab, #tm-reloadAllTabs, #context-resethitcount, #utils-resetAddonUpdatesToManual, #utils-resetAddonUpdatesToAutomatic, #ctRecol + menuitem + menuitem, menuitem[command="Browser:ReloadOrDuplicate"], menuitem[command="Browser:Reload"], menuitem[command="cmd_reload"], menuitem[oncommand$="tabbrowser.reloadTab(tabbrowser.mContextTab);"], menuitem[oncommand$="tabbrowser.reloadAllTabs(tabbrowser.mContextTab);"], menuitem[oncommand="gContextMenu.reloadFrame();"], menuitem[oncommand="RemoteTabViewer.buildList()"], menuitem[oncommand="BrowserReload();"] {
+list-style-image: url("./../images/reload.png") !important;
+}
+
+#context-navigation {
+background-color: #DADCE4 !important;
+padding-bottom: 2px !important;
+margin-bottom: 2px !important; 
+}
+
+#context-sep-navigation {
+-moz-margin-start: -28px !important;
+margin-top: -4px !important;
+}
+
+menulist > menupopup > menuseparator, .menulist-menupopup > menuseparator, menuseparator {
+    margin: 1px 3px 0px !important;
+    -moz-margin-start: 25px !important;
+    border-top: 1px solid #c0c0c0 !important;
+    border-bottom: 1px solid #f0f0f0 !important;
+    -moz-appearance: none !important;
+}
+
+
+

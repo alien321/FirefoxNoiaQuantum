@@ -1,0 +1,9 @@
+/************************************************************************************************/
+/* NoiaButtons CSS for Firefox 60+ **************************************************************/
+@import "./css/toolbar_buttons_noia.css"; /**/
+/* Shrink icons on hover ************************************************************************/
+@import "./css/toolbar_buttons_reduce_size_on_hover.css"; /**/
+@import "./css/toolbar_buttons_size_on_navbar_auto.css"; /**/
+/******Custom*******/
+@import "./css/noiaui_fox.css";
+@import "./css/noia_bookmark_icons.css";

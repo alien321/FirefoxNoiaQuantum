@@ -1,0 +1,113 @@
+/* Standard folder -- on Toolbar and Menus */
+#PlacesToolbarItems toolbarbutton[container="true"] .toolbarbutton-icon,
+#PlacesToolbarItems menu[container="true"] .menu-iconic-left,
+:-moz-any(
+#PlacesToolbarItems,
+#PlacesChevronPopup,
+#BMB_bookmarksPopup,
+#bookmarksMenu) menu[container="true"]:not([tagContainer="true"]) > .menu-iconic-left,
+/* Standard folder -- in Sidebar, Library, Add/Edit Bookmark dialog */
+:-moz-any(
+#bookmarks-view, 
+#editBMPanel_folderTree, 
+#placesList) treechildren::-moz-tree-image(container), 
+#editBMPanel_folderMenuList > .menulist-label-box > .menulist-icon,
+#editBMPanel_folderMenuList menupopup menuitem {
+    list-style-image: url("./../images/folder_closed.png") !important;
+}
+
+/* Standard folder -- on Toolbar and Menus */
+#PlacesToolbarItems toolbarbutton[open="true"] .toolbarbutton-icon,
+#PlacesToolbarItems menu[open="true"] .menu-iconic-left,
+:-moz-any(
+#PlacesToolbarItems,
+#PlacesChevronPopup,
+#BMB_bookmarksPopup,
+    #bookmarksMenu) menu[open="true"]:not([tagContainer="true"]) > .menu-iconic-left,
+/* Standard folder -- in Sidebar, Library, Add/Edit Bookmark dialog */
+:-moz-any(
+#bookmarks-view, 
+#editBMPanel_folderTree, 
+    #placesList) treechildren::-moz-tree-image(open), 
+#editBMPanel_folderMenuList > .menulist-label-box > .menulist-icon,
+#editBMPanel_folderMenuList menupopup menuitem {
+    list-style-image: url("./../images/folder_open.png") !important;
+}
+
+
+
+/* Live Bookmark -- on Toolbar and Menus */
+#PlacesToolbarItems toolbarbutton[container="true"][livemark="true"] .toolbarbutton-icon,
+#PlacesToolbarItems menu[container="true"][livemark="true"] .menu-iconic-left,
+:-moz-any(
+#PlacesToolbarItems,
+#PlacesChevronPopup,
+#BMB_bookmarksPopup,
+#bookmarksMenu) menu[container="true"][livemark="true"] > .menu-iconic-icon,
+/* Live Bookmark -- in Sidebar, Library, Add/Edit Bookmark dialog */
+:-moz-any(
+#bookmarks-view, 
+#editBMPanel_folderTree, 
+#placesList, 
+#placeContent) treechildren::-moz-tree-image(container, livemark) {
+    list-style-image: url("./../images/folder_closed.png") !important;
+}
+
+/* Live Bookmark -- on Toolbar and Menus */
+#PlacesToolbarItems toolbarbutton[open="true"][livemark="true"] .toolbarbutton-icon,
+#PlacesToolbarItems menu[open="true"][livemark="true"] .menu-iconic-left,
+:-moz-any(
+#PlacesToolbarItems,
+#PlacesChevronPopup,
+#BMB_bookmarksPopup,
+    #bookmarksMenu) menu[open="true"][livemark="true"] > .menu-iconic-icon,
+/* Live Bookmark -- in Sidebar, Library, Add/Edit Bookmark dialog */
+:-moz-any(
+#bookmarks-view, 
+#editBMPanel_folderTree, 
+#placesList, 
+    #placeContent) treechildren::-moz-tree-image(open, livemark) {
+    list-style-image: url("./../images/folder_open.png") !important;
+}
+
+
+/* Tag containers (preserve the built-in icon) */
+#PlacesToolbarItems toolbarbutton[container="true"][tagContainer="true"] .toolbarbutton-icon,
+#PlacesToolbarItems menu[container="true"][tagContainer="true"] .menu-iconic-left,
+:-moz-any(
+#PlacesToolbarItems,
+#PlacesChevronPopup,
+#BMB_bookmarksPopup,
+#bookmarksMenu) menu[container="true"][tagContainer="true"] > .menu-iconic-left > .menu-iconic-icon,
+/* Smart bookmark folder -- in Sidebar, Library, Add/Edit Bookmark dialog */
+:-moz-any(
+#bookmarks-view, 
+#editBMPanel_folderTree, 
+#placesList, 
+#placeContent) treechildren::-moz-tree-image(container, query, tagContainer) {
+  list-style-image: url(chrome://browser/skin/places/tag.svg) !important;
+}
+
+
+/* Preserve Built-in History/Tags/All Bookmarks Icons in Library */
+:-moz-any(
+#placesList, 
+#placeContent) treechildren::-moz-tree-image(query, OrganizerQuery_history____v), 
+:-moz-any(
+#placesList, 
+#placeContent) treechildren::-moz-tree-image(title, query, dayContainer) {
+  list-style-image: url("chrome://browser/skin/places/history.svg") !important;
+}
+:-moz-any(
+#placesList, 
+#placeContent) treechildren::-moz-tree-image(title, query, tagContainer),
+:-moz-any(
+#placesList, 
+#placeContent) treechildren::-moz-tree-image(query, OrganizerQuery_tags_______v) {
+  list-style-image: url("chrome://browser/skin/places/tag.svg") !important;
+}
+:-moz-any(
+#placesList, 
+#placeContent) treechildren::-moz-tree-image(query, OrganizerQuery_allbms_____v) {
+  list-style-image: url("chrome://browser/skin/places/allBookmarks.png") !important;
+}
