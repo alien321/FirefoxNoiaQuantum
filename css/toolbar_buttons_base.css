@@ -78,7 +78,7 @@ list-style-image: url("./../images/arrow.png") !important;
 }
 
 .scrollbutton-up {
-  transform: rotate(180deg) !important;
+  transform: rotate(90deg) !important;
 }
 
 .scrollbutton-down {
