@@ -6,145 +6,11 @@
 window, page, dialog, wizard, prefwindow {
     color: #000 !important;
     font: message-box !important; 
-    background-color: #dadce4 !important;
     -moz-appearance: none !important;
+    background-color: #dadce4 !important;
 } 
 
-#normalBox {
-    border-right: 1px solid #fff !important;
-    border-bottom: 1px solid #fff !important;
-    border-left: 1px solid #949494 !important;
-    border-radius: 5px !important;
-    margin: 3px !important;
-    padding: 3px 3px 6px !important;
-    background-color: #D3D6DE !important;
-    border-top: 1px solid #949494 !important;;
-}
 
-.header {
-    min-height: 5px !important;
-}
-
-separator {
-    display: none !important;
-}
-
-radio {
-    -moz-box-align: center !important;
-    margin: 2px 4px !important;
-    padding: 1px 2px 1px 0px !important;
-    text-shadow: 1px 1px 0 transparent !important;
-    
-}
-
-.radio-check {
-    list-style-image: url("./../images/radio.png") !important;
-    -moz-appearance: none !important;
-}
-
-radio[selected="true"] .radio-check {
-    list-style-image: url("./../images/radio-checked.png") !important;
-}
-
-radio:hover:not([disabled="true"]) .radio-check {
-    list-style-image: url("./../images/radio-active.png") !important;
-}
-
-radio[selected="true"]:hover:not([disabled="true"]) .radio-check {
-    list-style-image: url("./../images/radio-checked-active.png") !important;
-}
-
-
-
-menulist {
-    -moz-appearance: none !important;
-    -moz-padding-end: 2px !important;
-    background-color: #f8f8f8 !important;
-    color: #000000 !important;
-    border: 1px solid !important;
-    border-top-color: #909090 !important;
-    border-right-color: #909090 !important;
-    border-bottom-color: #b0b0b0 !important;
-    border-left-color: #909090 !important;
-    border-radius: 9.5pt !important;
-    margin: 2px 4px !important;
-    min-height: 20px !important;
-}
-
-.menulist-dropmarker {
-    width: 18px !important;
-    -moz-box-align: center !important;
-    -moz-box-pack: center !important;
-    list-style-image: url("./../images/url_dropmarker.png") !important;
-    -moz-image-region: rect(0px 16px 16px 0px) !important;
-    padding: 1px 0 1px 2px !important;
-    /*display: unset !important;*/
-    -moz-appearance: none !important;
-}
-
-checkbox {
-    -moz-box-align: center !important;
-    margin: 2px -1px !important;
-    padding: 1px 2px 1px 4px !important;
-    text-shadow: 1px 1px 0 transparent !important;
-}
-
-.checkbox-check {
-    width: 16px !important;
-    height: 16px !important;
-    list-style-image: url("./../images/checkbox.png") !important;
-    -moz-appearance: none !important;
-}
-
-checkbox:hover:not([disabled="true"]) > .checkbox-check {
-    list-style-image: url("./../images/checkbox-active.png") !important;
-}
-
-checkbox[checked="true"] > .checkbox-check {
-    list-style-image: url("./../images/checkbox-checked.png") !important;
-}
-
-checkbox[checked="true"]:hover:not([disabled="true"]) > .checkbox-check {
-    list-style-image: url("./../images/checkbox-checked-active.png") !important;
-}
-
-button {
-    min-width: 73px !important;
-    -moz-box-pack: center !important;
-    -moz-box-align: center !important;
-    font-family: arial, sans-serif !important;
-    font-weight: normal !important;
-    color: #000 !important;
-    margin: 1px 3px !important;
-    padding: 2px 3px 2px 1px !important;
-    border: 1px solid #000 !important;
-    -moz-padding-start: 8px !important; 
-    -moz-padding-end: 8px !important;
-    border-top-color: #404040 #fff !important;
-    border-right-color: #404040 #808080 !important;
-    border-bottom-color: #404040 #808080 !important;
-    border-left-color: #404040 #fff !important;
-    border-radius: 4px !important;
-    background-color: #fafafa !important;
-    box-shadow: 0 0 2px rgba(255, 255, 255, 0.4) inset, 0 4px 6px rgba(255, 255, 255, 0.4) inset, 0 11px 0 -2px rgba(255, 255, 255, 0.2) inset, 0 16px 8px rgba(80, 80, 80, 0.3) inset, 1px 2px 4px rgba(0, 0, 0, 0.1) !important;
-    -moz-appearance: none !important;
-}
-
-button:hover:not([disabled="true"]) {
-    background: url("./../images/body-hover.png") repeat-x top left #b8e9fe !important;
-    color: #000 !important;
-}
-
-
-button[disabled="true"] {
-    color: #999 !important;
-    background: none !important;
-    background-color: #fafafa !important;
-    -moz-border-top-colors: #808080 #fff !important;
-    -moz-border-right-colors: #808080 #fff !important;
-    -moz-border-bottom-colors: #808080 #fff !important;
-    -moz-border-left-colors: #808080 #fff !important;
-}
 .close-icon {
     list-style-image: url("./../images/close.png") !important;
     -moz-image-region: rect(0, 16px, 16px, 0) !important;
@@ -156,9 +22,6 @@ button[disabled="true"] {
     transform: scale(0.75) !important;
     transition-duration: 0.1s !important;
 }
-
-
-
 
 #TabsToolbar {
 -moz-appearance: none !important;
